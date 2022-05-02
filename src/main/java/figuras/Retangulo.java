@@ -32,6 +32,6 @@ public class Retangulo {
     }
 
     public double getArea() {
-        return ((getBase() * getAltura() + 1 ));
+        return ((getBase() * getAltura() ));
     }
 }
