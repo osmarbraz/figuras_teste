@@ -7,10 +7,10 @@ public class TestCirculo {
 
     @Test
     public void testGetArea() {
-        double lado = 4;
-        double retornoEsperado = 16.0;
-        Quadrado quadrado = new Quadrado("", lado);
-        double retornoFeito = quadrado.getArea();
+        double lado = 5;
+        double retornoEsperado = 78.53750000000001;        
+        Circulo circulo = new Circulo("", lado);
+        double retornoFeito = circulo.getArea();
         assertEquals(retornoEsperado, retornoFeito, 0);
     }
 }
