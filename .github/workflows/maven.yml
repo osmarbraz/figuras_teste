@@ -40,11 +40,7 @@ jobs:
         cache: maven
     - name: Build test with Maven
       run: mvn -B test --file pom.xml
-    - name: Analyze with SonarCloud
-      run: mvn -B verify sonar:sonar -Dsonar.projectKey=osmarbraz_figuras_teste -Dsonar.organization=osmarbraz -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{secrets.SONARCLOUD_TOKEN}}
-      env:
-         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-            
+                
   build-prd:
     runs-on: ubuntu-latest
     environment: 
