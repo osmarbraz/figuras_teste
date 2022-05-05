@@ -38,7 +38,7 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
-    - name: Run unit teste with Maven
+    - name: Run unit test with Maven
       run: mvn -B test --file pom.xml
     
     - name: Integrate with sonarcloud
