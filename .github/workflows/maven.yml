@@ -41,7 +41,11 @@ jobs:
     - name: Build test with Maven
       run: mvn -B test --file pom.xml
     - name: Integrate with sonarcloud
-      run: mvn -B org.jacoco:jacoco-maven-plugin:prepare-agent verify sonar:sonar -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml -Dsonar.projectKey=osmarbraz_figuras_teste -Dsonar.organization=osmarbraz -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{secrets.SONARCLOUD_TOKEN}}
+      run: mvn -B verify sonar:sonar                 
+                -Dsonar.projectKey=osmarbraz_figuras_teste 
+                -Dsonar.organization=osmarbraz 
+                -Dsonar.host.url=https://sonarcloud.io 
+                -Dsonar.login=${{secrets.SONARCLOUD_TOKEN}}
       env:
            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
             
