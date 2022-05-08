@@ -81,6 +81,15 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    # Executa a compilação, testes e o empacotamento do projeto com o Maven
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml 
+    # Executa a compilação, testes e o empacotamento e distribuição do projeto com o Maven
+    - name: Build and publish with Maven
+      run: mvn -B deploy --file pom.xml 
+      env:
+          # GITHUB_TOKEN is provided by default in the repo with read/write access to Github Packages
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - run: mkdir dist && cp target/*.jar dist
+    - uses: actions/upload-artifact@v2
+      with:
+        name: Package
+        path: dist
