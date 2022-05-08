@@ -82,10 +82,15 @@ jobs:
         distribution: 'temurin'
         cache: maven
     # Executa a compilação e o empacotamento do projeto com o Maven. 
+    # O parâmetro -DskipTests pula os testes pois já foram executados no ambiente anterior.
     - name: Build and package with Maven      
-      run: mvn -B package --file pom.xml 
-    - run: mkdir staging && cp target/*jar-with-dependencies.jar staging
-    - uses: actions/upload-artifact@v1
+      run: mvn -B package --file pom.xml -DskipTests
+    - name: Create a temporary artifact downloads folder
+    - run: mkdir staging
+    - name: Add artifacts to publish to the temp folder
+    - run: cp target/*jar-with-dependencies.jar staging
+    - name: Use the Upload Artifact GitHub Action
+    - uses: actions/upload-artifact@v2
       with:
         name: Package
         path: staging
