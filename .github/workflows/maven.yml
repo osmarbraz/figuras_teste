@@ -81,9 +81,9 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    # Executa a compilação e o empacotamento do projeto com o Maven. O parâmetro -DskipTests pula os testes pois já foram executados no ambiente anterior.
+    # Executa a compilação e o empacotamento do projeto com o Maven. 
     - name: Build and package with Maven      
-      run: mvn -B package --file pom.xml -DskipTests 
+      run: mvn -B package --file pom.xml 
     - run: mkdir staging && cp target/*jar-with-dependencies.jar staging
     - uses: actions/upload-artifact@v1
       with:
