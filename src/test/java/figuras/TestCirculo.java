@@ -2,6 +2,7 @@ package figuras;
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class TestCirculo {
 
@@ -13,4 +14,10 @@ public class TestCirculo {
         double retornoFeito = circulo.getArea();
         assertEquals(retornoEsperado, retornoFeito, 0);
     }
+    
+    @Test
+    public void testCirculo() {        
+        Circulo circulo = new Circulo();        
+        assertTrue(("".equals(circulo.getCor()) && circulo.getRaio()==0.0));
+    }  
 }

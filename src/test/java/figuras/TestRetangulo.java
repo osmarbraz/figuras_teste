@@ -3,6 +3,7 @@ package figuras;
 import figuras.Retangulo;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class TestRetangulo {
 
@@ -15,4 +16,10 @@ public class TestRetangulo {
         double retornoFeito = retangulo.getArea();
         assertEquals(retornoEsperado, retornoFeito, 0);
     }
+    
+    @Test
+    public void testRetangulo() {        
+        Retangulo retangulo = new Retangulo();        
+        assertTrue(("".equals(retangulo.getCor()) && retangulo.getAltura() == 0 && retangulo.getBase() == 0));
+    }  
 }

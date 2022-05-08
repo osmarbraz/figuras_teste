@@ -2,6 +2,7 @@ package figuras;
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class TestQuadrado {
 
@@ -13,4 +14,10 @@ public class TestQuadrado {
         double retornoFeito = quadrado.getArea();
         assertEquals(retornoEsperado, retornoFeito, 0);
     }
+    
+    @Test
+    public void testQuadrado() {        
+        Quadrado quadrado = new Quadrado();        
+        assertTrue(("".equals(quadrado.getCor()) && quadrado.getLado()==0));
+    }  
 }
