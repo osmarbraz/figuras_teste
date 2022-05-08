@@ -14,36 +14,36 @@ public class Principal {
         Quadrado quadrado = new Quadrado();
         Circulo circulo = new Circulo();
         while (!opcao.equals("9")) {
-            opcao = JOptionPane.showInputDialog("1 - Leitura Triangulo "
-                    + "\n2 - Area Triangulo "
-                    + "\n3 - Leitura Retangulo "
-                    + "\n4 - Area Retangulo "
+            opcao = JOptionPane.showInputDialog("1 - Leitura Triângulo "
+                    + "\n2 - Área Triângulo "
+                    + "\n3 - Leitura Retângulo "
+                    + "\n4 - Área Retangulo "
                     + "\n5 - Leitura Quadrado "
-                    + "\n6 - Area Quadrado "
-                    + "\n7 - Leitura Circulo "
-                    + "\n8 - Area Circulo "
+                    + "\n6 - Área Quadrado "
+                    + "\n7 - Leitura Círculo "
+                    + "\n8 - Área 0írculo "
                     + "\n9 - Sair");
 
             switch (opcao) {
                 case "1": {
-                    triangulo.setCor(JOptionPane.showInputDialog("Digite a Cor do Triangulo"));
-                    triangulo.setBase(Double.parseDouble(JOptionPane.showInputDialog("Digite a Base do Triangulo")));
-                    triangulo.setAltura(Double.parseDouble(JOptionPane.showInputDialog("Digite a Altura do Triangulo")));
+                    triangulo.setCor(JOptionPane.showInputDialog("Digite a Cor do Triângulo"));
+                    triangulo.setBase(Double.parseDouble(JOptionPane.showInputDialog("Digite a Base do Triângulo")));
+                    triangulo.setAltura(Double.parseDouble(JOptionPane.showInputDialog("Digite a Altura do Triângulo")));
                     break;
                 }
                 case "2": {
-                    JOptionPane.showMessageDialog(null, "Area Triangulo: " + triangulo.getArea());
+                    JOptionPane.showMessageDialog(null, "Área Triangulo: " + triangulo.getArea());
                     break;
                 }
 
                 case "3": {
-                    retangulo.setCor(JOptionPane.showInputDialog("Digite a Cor do Retangulo"));
-                    retangulo.setBase(Double.parseDouble(JOptionPane.showInputDialog("Digite a Base do Retangulo")));
-                    retangulo.setAltura(Double.parseDouble(JOptionPane.showInputDialog("Digite a Altura do Retangulo")));
+                    retangulo.setCor(JOptionPane.showInputDialog("Digite a Cor do Retângulo"));
+                    retangulo.setBase(Double.parseDouble(JOptionPane.showInputDialog("Digite a Base do Retângulo")));
+                    retangulo.setAltura(Double.parseDouble(JOptionPane.showInputDialog("Digite a Altura do Retângulo")));
                     break;
                 }
                 case "4": {
-                    JOptionPane.showMessageDialog(null, "Area Retangulo: " + retangulo.getArea());
+                    JOptionPane.showMessageDialog(null, "Área Retângulo: " + retangulo.getArea());
                     break;
                 }
 
@@ -53,7 +53,7 @@ public class Principal {
                     break;
                 }
                 case "6": {
-                    JOptionPane.showMessageDialog(null, "Area Quadrado: " + quadrado.getArea());
+                    JOptionPane.showMessageDialog(null, "Área Quadrado: " + quadrado.getArea());
                     break;
                 }
 
@@ -63,7 +63,7 @@ public class Principal {
                     break;
                 }
                 case "8": {
-                    JOptionPane.showMessageDialog(null, "Area Circulo: " + circulo.getArea());
+                    JOptionPane.showMessageDialog(null, "Área Circulo: " + circulo.getArea());
                     break;
                 }
             }
