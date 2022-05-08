@@ -11,7 +11,7 @@ import org.junit.runners.Suite.SuiteClasses;
 import junit.framework.JUnit4TestAdapter;
 
 @RunWith(Suite.class)
-@SuiteClasses({TestFigura.class, TestTriangulo.class, TestRetangulo.class, TestQuadrado.class, TestCirculo.class  })
+@SuiteClasses({TestFigura.class, TestTriangulo.class, TestRetangulo.class, TestQuadrado.class, TestCirculo.class})
 public class TesteSuite {
 
     public static junit.framework.Test suite() {

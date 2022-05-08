@@ -14,11 +14,11 @@ public class TestTriangulo {
         Triangulo triangulo = new Triangulo("", base, altura);
         double retornoFeito = triangulo.getArea();
         assertEquals(retornoEsperado, retornoFeito, 0);
-    }  
-    
+    }
+
     @Test
-    public void testTriangulo() {        
-        Triangulo triangulo = new Triangulo();        
+    public void testTriangulo() {
+        Triangulo triangulo = new Triangulo();
         assertTrue(("".equals(triangulo.getCor()) && triangulo.getAltura() == 0 && triangulo.getBase() == 0));
-    }  
+    }
 }

@@ -14,10 +14,10 @@ public class TestQuadrado {
         double retornoFeito = quadrado.getArea();
         assertEquals(retornoEsperado, retornoFeito, 0);
     }
-    
+
     @Test
-    public void testQuadrado() {        
-        Quadrado quadrado = new Quadrado();        
-        assertTrue(("".equals(quadrado.getCor()) && quadrado.getLado()==0));
-    }  
+    public void testQuadrado() {
+        Quadrado quadrado = new Quadrado();
+        assertTrue(("".equals(quadrado.getCor()) && quadrado.getLado() == 0));
+    }
 }

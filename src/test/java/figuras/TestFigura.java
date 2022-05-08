@@ -7,8 +7,7 @@ public class TestFigura {
 
     @Test
     public void testGetCor() {
-        double lado = 5;
-        String retornoEsperado = "Verde";        
+        String retornoEsperado = "Verde";
         Figura circulo = new Circulo();
         circulo.setCor("Verde");
         assertTrue(retornoEsperado.equals(circulo.getCor()));
