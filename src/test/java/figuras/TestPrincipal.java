@@ -1,11 +1,18 @@
 package figuras;
 
+import java.security.Principal;
 import static org.junit.Assert.assertNotNull;
 import org.junit.Test;
 
 
 public class TestPrincipal {
 
+    @Test
+    public void testMain() {
+        Principal main = new Principal();
+        assertNotNull(main);        
+    }
+    
     @Test
     public void testMainTriangulo() {
         Triangulo triangulo = new Triangulo();

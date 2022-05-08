@@ -21,7 +21,7 @@ public class Principal {
                     + "\n5 - Leitura Quadrado "
                     + "\n6 - Área Quadrado "
                     + "\n7 - Leitura Círculo "
-                    + "\n8 - Área 0írculo "
+                    + "\n8 - Área Círculo "
                     + "\n9 - Sair");
 
             switch (opcao) {
