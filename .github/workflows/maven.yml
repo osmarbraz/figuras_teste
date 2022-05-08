@@ -86,11 +86,11 @@ jobs:
     - name: Build and package with Maven      
       run: mvn -B package --file pom.xml -DskipTests
     - name: Create a temporary artifact downloads folder
-    - run: mkdir staging
+      run: mkdir staging
     - name: Add artifacts to publish to the temp folder
-    - run: cp target/*jar-with-dependencies.jar staging
+      run: cp target/*jar-with-dependencies.jar staging
     - name: Use the Upload Artifact GitHub Action
-    - uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v2
       with:
         name: Package
         path: staging
