@@ -37,7 +37,7 @@ jobs:
     strategy:
       matrix: 
         java: [16, 17, 18]        
-    name: Construindo com Java ${{matrix.java}}... 
+    name: build-hmg - JDK ${{matrix.java}}... 
     steps:
     - name: Realiza o checkout do repositório
       uses: actions/checkout@v3 
