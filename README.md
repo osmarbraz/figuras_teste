@@ -10,8 +10,8 @@ Utiliza 3 ambientes:
 - prd - Produção
 
 Pipeline 
-- dev - Compilação 
-- hmg - Compilação, Testes, Análise Código, Cobertura Código
+- dev - Compilação e teste.
+- hmg - Análise e cobertura de código
 - prd - Empacotamento
 
 <br>

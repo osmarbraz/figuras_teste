@@ -24,8 +24,8 @@ jobs:
         java-version: '18'
         distribution: 'temurin'
         cache: maven
-    - name: Compila o projeto com Maven
-      run: mvn -B compile --file pom.xml
+    - name: Testa o projeto com Maven
+      run: mvn -B test --file pom.xml
   
   # Jobs do ambiente de homologação
   build-hmg:
@@ -49,9 +49,6 @@ jobs:
         java-version: ${{matrix.java}}
         distribution: 'temurin'
         cache: maven
-    - name: Testa o projeto com Maven
-      run: mvn -B test --file pom.xml
-      
     # Executa os passos da análise do código com o sonarcube     
     - name: Cache dos pacotes do SonarCloud
       uses: actions/cache@v1
@@ -86,17 +83,19 @@ jobs:
         java-version: '18'
         distribution: 'temurin'
         cache: maven
-    # Executa o empacotamento do projeto com o Maven. 
+    # Executa o empacotamento do projeto com o Maven no runner    
     # O parâmetro -DskipTests pula os testes pois já foram executados no ambiente anterior.
     - name: Empacota o projeto com Maven      
       run: mvn -B package --file pom.xml -DskipTests
     # Cria o artefato de download    
-    - name: Crie uma pasta temporária de downloads de artefatos
+    - name: Crie uma pasta temporária(stating) de downloads de artefatos
       run: mkdir staging
-    - name: Copia os artefatos a serem publicados na pasta temporária
+    - name: Copia os artefatos a serem publicados na pasta temporária(stating)
       run: cp target/*jar-with-dependencies.jar staging
     - name: Usa Upload Artifact do GitHub Action
       uses: actions/upload-artifact@v2
       with:
-        name: Package
-        path: staging      
+        # Nome do arquivo a ser gerado
+        name: Package-${{  runner.os }} #.zip será adicionado automaticamente
+        # Caminho da pasta temporária (stating)
+        path: staging        
