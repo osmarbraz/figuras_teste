@@ -1,7 +1,7 @@
 package figuras;
 
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-import static org.junit.Assert.assertTrue;
 
 public class TestFigura {
 
@@ -10,6 +10,6 @@ public class TestFigura {
         String retornoEsperado = "Verde";
         Figura circulo = new Circulo();
         circulo.setCor("Verde");
-        assertTrue(retornoEsperado.equals(circulo.getCor()));
+        assertEquals(retornoEsperado, circulo.getCor());
     }
 }
