@@ -32,6 +32,6 @@ public class Retangulo extends Figura {
     }
 
     public double getArea() {
-        return ((getBase() * getAltura()));
+        return (getBase() * getAltura());
     }
 }
