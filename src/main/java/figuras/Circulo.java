@@ -25,6 +25,6 @@ public class Circulo extends Figura {
 
     @Override
     public double getArea() {        
-        return ((PI * getRaio() * getRaio()));
+        return (PI * getRaio() * getRaio());
     }
 }
